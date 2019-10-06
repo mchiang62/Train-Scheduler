@@ -1,13 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Train Scheduler</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
 </head>
+
 <body>
-    <h1>San Francisco BART Schedule</h1>
-    
+
+    <div class="container">
+        <div class="row">
+
+            <h1>Train Schedule</h1>
+
+        </div>
+
+        <div class="border border-info">
+
+            <h4>Current Train Schedule</h4>
+
+            <table class="table">
+
+                <thead>
+                    <tr>
+                        <th scope="col">Train Name</th>
+                        <th scope="col">Destination</th>
+                        <th scope="col">Frequency (min)</th>
+                        <th scope="col">Next Arrival</th>
+                        <th scope="col">Minutes Away</th>
+                    </tr>
+                </thead>
+                <tbody id="new-row">
+
+                </tbody>
+            </table>
+
+        </div>
+
+        <br>
+
+        <div class="border border-info" id=form>
+            <h4>Add Train</h4>
+
+            
+
+            <form>
+
+                <div class="form-group">
+                    <label>Train Name</label>
+                    <input class="form-control" type="text" id="train-name">
+                </div>
+                <div class="form-group">
+                    <label>Destination</label>
+                    <input class="form-control" type="text" id="destination">
+                </div>
+                <div class="form-group">
+                    <label>First Train Time (HH:mm - military time)</label>
+                    <input class="form-control" type="text" id="first-train">
+                </div>
+                <div class="form-group">
+                    <label>Frequency (min)</label>
+                    <input class="form-control" type="text" id="frequency">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="assets/train.js"></script>
 </body>
+
 </html>
