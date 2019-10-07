@@ -10,10 +10,16 @@ $(document).ready(function () {
         appId: "1:975963282752:web:ab2ed3272a60b0c8fa6ea5",
         measurementId: "G-GD7G5CML2X"
     };
-    // Initialize Firebase
+    
     firebase.initializeApp(firebaseConfig);
 
+    var database = firebase.database();
 
+    var train;
+    var dest;
+    var firstTrain;
+    var freq = 0;
+    
 
     $("#addNewTrain").on("click", function (event) {
         event.preventDefault();
@@ -23,6 +29,15 @@ $(document).ready(function () {
         firstTrain = $("#first-train").val().trim();
         freq = $("#frequency").val().trim();
 
+        database.ref().push ({
+            train: train,
+            dest: dest,
+            firstTrain: firstTrain,
+            freq: freq,
+            
+        });
+
+        $("form")[0]. reset();
 
 
     });
