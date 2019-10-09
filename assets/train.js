@@ -42,9 +42,37 @@ $(document).ready(function () {
 
     });
 
+// childsnapshot?
+
+    database.ref().on("child_added", function(snapshot) {
+
+        var row = $("<tr>");
+        var name = $("<td>");
+
+        name.text(snapshot.val().train);
+        row.append(name);
+       
+
+        var destination = $("<td>");
+
+        destination.text(snapshot.val().dest);
+        row.append(destination);
+        
+
+        var frequency = $("<td>");
+
+        frequency.text(snapshot.val().freq);
+        row.append(frequency);
+        $("#tbody").append(row);
+
+        
 
 
-    database.ref().on("child_added", function(childSnapshot) {
+
+
+  
+
+        console.log(snapshot.val())
 
 
 
@@ -80,7 +108,7 @@ $(document).ready(function () {
 
 
     });
-    
+
 
 
 
