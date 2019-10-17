@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Train Scheduler</title>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans|Anton&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -33,9 +34,11 @@
 
         </div>
 
-        <div class="border border-info">
+        <br>
 
-            <h4>Current Train Schedule</h4>
+        <div class="border border-white">
+
+            <h4><span id="table-title">Current Train Schedule</span></h4>
 
             <table class="table">
 
@@ -63,8 +66,8 @@
 
         <br>
 
-        <div class="border border-info">
-            <h4>Add Train</h4>
+        <div class="border border-white">
+            <h4><span id="table-title">Add Train</span></h4>
 
 
 
@@ -87,7 +90,7 @@
                     <input class="form-control" type="text" id="frequency">
                 </div>
 
-                <button type="submit" class="btn btn-primary" id="addNewTrain">Submit</button>
+                <button type="submit" class="btn btn-info" id="addNewTrain">Submit</button>
 
             </form>
 

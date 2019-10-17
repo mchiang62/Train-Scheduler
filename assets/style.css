@@ -1,11 +1,43 @@
 body {
-    background-color: beige;
+    background-image: url('https://wpamelia.com/wp-content/uploads/2019/02/4k-wallpaper-architecture-background-1308624.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-family: 'Alegreya Sans', sans-serif;
+    color: lightcoral;
 }
 
 h4 {
-    background-color: lightgray;
+    font-family: 'Anton', sans-serif;
+    padding: 5px;
+    color: whitesmoke;
 }
 
-#form {
+
+h1 {
+    margin-top: 25px;
+    font-family: 'Anton', sans-serif;
+    color: whitesmoke;
+}
+
+.container {
     margin-bottom: 75px;
+}
+
+#table-title {
+    margin-left: 6px;
+
+}
+
+label {
+    margin-left: 6px;
+
+}
+
+form {
+    padding: 4px;
+}
+
+button {
+    margin-left: 2px
 }
