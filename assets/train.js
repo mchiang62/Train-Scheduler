@@ -42,8 +42,6 @@ $(document).ready(function () {
 
   });
 
-  // childsnapshot?
-  // child added run for everything in the database and the new items added
 
   database.ref().on("child_added", function (snapshot) {
 
@@ -68,34 +66,20 @@ $(document).ready(function () {
     row.append(frequency);
 
 
-
-    //   // First Time (pushed back 1 year to make sure it comes before current time)
     var firstTimeConverted = moment((snapshot.val().firstTrain), "HH:mm").subtract(1, "years");
     console.log(firstTimeConverted);
 
     var currentTime = moment();
-    // console.log("current " + moment(currentTime).format("HH:mm"))
 
-    // documentation of moment.js
-
-    //   // Difference between the times
     var diffTime = currentTime.diff(firstTimeConverted, "minutes");
-    //   console.log("DIFFERENCE IN TIME: " + diffTime);
 
-    //   // Time apart (remainder)
     var tRemainder = diffTime % snapshot.val().freq;
-    //   console.log(tRemainder);
 
-    // Minute Until Train
     var minUntilNextTrain = snapshot.val().freq - tRemainder;
     console.log("Min until next Train: " + minUntilNextTrain);
-    //   $("#min-row").append(tMinutesTillTrain);
 
-    // Next Train
     var nextTrain = currentTime.add(minUntilNextTrain, "minutes");
     console.log("Arrival Time: " + moment(nextTrain).format("hh:mm"));
-    //   $("#arrival-row").append(moment(nextTrain).format("hh:mm"));
-
 
     var nextArrival = $("<td>");
 
